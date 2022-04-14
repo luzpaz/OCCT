@@ -37,7 +37,7 @@ class TopoDS_Edge;
 
 
 //! Topological Sweep Algorithm
-//! Computes an  Sweep  shell using a  generating
+//! Computes a Sweep shell using a generating
 //! wire, an SectionLaw and an LocationLaw.
 class BRepFill_Sweep 
 {
@@ -53,7 +53,7 @@ public:
   //! Set Approximation Tolerance
   //! Tol3d : Tolerance to surface approximation
   //! Tol2d : Tolerance used to perform curve approximation
-  //! Normally the 2d curve are approximated with a
+  //! Normally the 2d curve is approximated with a
   //! tolerance given by the resolution on support surfaces,
   //! but if this tolerance is too large Tol2d is used.
   //! TolAngular : Tolerance (in radian) to control the angle
@@ -64,7 +64,7 @@ public:
   //! Tolerance  To controle Corner management.
   //!
   //! If the discontinuity is lesser than <AngleMin> in radian The
-  //! Transition Performed will be alway "Modified"
+  //! Transition Performed will be always "Modified"
   Standard_EXPORT void SetAngularControl (const Standard_Real AngleMin = 0.01, const Standard_Real AngleMax = 6.0);
   
   //! Set the flag that indicates attempt to approximate
@@ -72,15 +72,15 @@ public:
   //! to be C0.
   Standard_EXPORT void SetForceApproxC1 (const Standard_Boolean ForceApproxC1);
   
-  //! Build the Sweep  Surface
+  //! Build the Sweep Surface
   //! Transition define Transition strategy
   //! Approx define Approximation Strategy
   //! - GeomFill_Section : The composed Function Location X Section
   //! is directly approximated.
   //! - GeomFill_Location : The location law is approximated, and the
-  //! SweepSurface is bulid algebric composition
+  //! SweepSurface builds an algebraic composition
   //! of approximated location law and section law
-  //! This option is Ok, if Section.Surface() methode
+  //! This option is Ok, if Section.Surface() method
   //! is effective.
   //! Continuity : The continuity in v waiting on the surface
   //! Degmax     : The maximum degree in v required on the surface
@@ -88,13 +88,13 @@ public:
   //! the surface.
   Standard_EXPORT void Build (TopTools_MapOfShape& ReversedEdges, BRepFill_DataMapOfShapeHArray2OfShape& Tapes, BRepFill_DataMapOfShapeHArray2OfShape& Rails, const BRepFill_TransitionStyle Transition = BRepFill_Modified, const GeomAbs_Shape Continuity = GeomAbs_C2, const GeomFill_ApproxStyle Approx = GeomFill_Location, const Standard_Integer Degmax = 11, const Standard_Integer Segmax = 30);
   
-  //! Say if the Shape is Build.
+  //! Say if the Shape is Built.
   Standard_EXPORT Standard_Boolean IsDone() const;
   
   //! returns the Sweeping Shape
   Standard_EXPORT TopoDS_Shape Shape() const;
   
-  //! Get the Approximation  error.
+  //! Get the Approximation error.
   Standard_EXPORT Standard_Real ErrorOnSurface() const;
   
   Standard_EXPORT Handle(TopTools_HArray2OfShape) SubShape() const;

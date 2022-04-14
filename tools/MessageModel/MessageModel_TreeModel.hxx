@@ -59,7 +59,7 @@ public:
 
   //! Returns true if parameter report was added into the model
   //! \param theReport a report instance
-  //! \return boolen value
+  //! \return boolean value
   Standard_EXPORT Standard_Boolean HasReport (const Handle(Message_Report)& theReport);
 
   //! Add shape, append it to the model root item
