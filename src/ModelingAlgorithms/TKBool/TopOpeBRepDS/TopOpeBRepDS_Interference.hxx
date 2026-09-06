@@ -42,7 +42,7 @@
 //! - Support: Index in the data structure of the
 //! object supporting the interference.
 //!
-//! - GeometryType: Type ofthe geometry of the
+//! - GeometryType: Type of geometry of the
 //! interference (SURFACE, CURVE, POINT).
 //!
 //! - Geometry: Index in the data structure of the
